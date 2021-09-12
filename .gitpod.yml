@@ -1,0 +1,23 @@
+---
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - name: build llvm libraries
+    init: |
+      pushd build-scripts || exit 1
+      python3 ./build_llvm.py || exit 1
+      popd
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+# ports:
+#   - port: 3000
+#     onOpen: open-preview
+
+vscode:
+  extensions:
+    - CoenraadS.bracket-pair-colorizer
+    - dtsvet.vscode-wasm
+    - ms-vscode.cpptools
+    - ms-python.vscode-pylance
+    - redhat.vscode-yaml
+    - vadimcn.vscode-lldb	
+    - vscodevim.vim
